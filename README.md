@@ -6,12 +6,17 @@ This project is a simple crud realised with spring boot
 We use bellsoft liberica as basic image optimised for Java, see the references below:
 - https://hub.docker.com/r/bellsoft/liberica-runtime-container?utm_source=medium&utm_medium=post&utm_campaign=edelveismedium&utm_content=dockermultistage
 - https://medium.com/@cat.edelveis/a-guide-to-docker-multi-stage-builds-for-spring-boot-08e3a64c9812
-
-## Running the application in dev mode
-
+  
+## packaging the application
 ```shell script
 mvn clean package
 ```
+
+## running the application
+```shell script
+mvn spring-boot:run
+```
+
 
 ## Create the image using podman
 First start Podman
