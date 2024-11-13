@@ -42,6 +42,22 @@ curl -X DELETE --location "http://localhost:8080/books/1
 ```
 
 
+## Deploying to ECR with Podman
+Reference from: https://docs.aws.amazon.com/AmazonECR/latest/userguide/Podman.html
+
+Login:
+```
+aws ecr get-login-password --region region | podman login --username AWS --password-stdin aws_account_id.dkr.ecr.region.amazonaws.com
+```
+
+Push:
+Create a repository on AWS(better also adding a namespace to group functionalities)\
+ then tag locally the image and push to AWS ECR
+```
+podman tag local_image:tag aws_account_id.dkr.ecr.region.amazonaws.com/repository_name:tag 
+podman push aws_account_id.dkr.ecr.region.amazonaws.com/repository_name:tag
+
+```
 
 
 
