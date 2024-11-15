@@ -31,3 +31,16 @@ build/
 
 ### VS Code ###
 .vscode/
+/terraform/retrieve-ecr-image/.terraform.lock.hcl
+/terraform/terraform-ecs/.terraform/
+/terraform/retrieve-ecr-image/.terraform/
+/terraform/terraform-test/.terraform/
+/terraform/retrieve-ecr-image/terraform.tfstate
+/terraform/retrieve-ecr-image/terraform.tfstate.backup
+/terraform/terraform-ecs/.terraform.lock.hcl
+/terraform/terraform-ecs/terraform.tfstate
+/terraform/terraform-ecs/terraform.tfstate.backup
+/terraform/terraform-test/.terraform.lock.hcl
+/terraform/terraform-test/my_plan.tfplan
+/terraform/terraform-test/terraform.tfstate
+/terraform/terraform-test/terraform.tfstate.backup

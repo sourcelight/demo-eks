@@ -59,11 +59,11 @@ podman push aws_account_id.dkr.ecr.region.amazonaws.com/repository_name:tag
 
 ```
 
+## Terraform ECS
+Reference: https://www.fosstechnix.com/create-an-amazon-ecs-cluster-using-terraform/
 
-
-###Notes
+### Notes
 In case of different environments: Linux, Windows, etc. apply the following command
 ```shell script
 git add --renormalize .
 ```
-
