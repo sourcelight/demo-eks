@@ -1,5 +1,6 @@
 # Spring boot demo eks
-This project is a simple crud realised with spring boot
+This project is a simple crud realised with spring boot \
+and Podman to create images realised with a double stage docker file
 
 
 ## Dockerfile
@@ -20,22 +21,27 @@ mvn spring-boot:run
 
 ## Create the image using podman
 First start Podman
-```
+```shell script
 podman machine start
 ```
 ```shell script
 podman build -f  src/main/docker/Dockerfile.jvm  -t my-spring-boot-app .
 ```
 
+## running the application locally
+
+```shell script
+mvn spring-boot:run
+```
+
+
 ## Testing the application
 Note: --location  to automatically handle HTTP redirects(3XX), especially important for web requests where resources might be relocated
 ```shell script
-curl -X POST --location "http://localhost:8080/books" \
--H "Content-Type: application/json" \
---data "{\"title\": \"title 1\", \"author\": \"author 1\"}"
+curl -X POST -v --location "http://localhost:8080/books" -H "Content-Type: application/json" --data "{\"title\": \"title 1\", \"author\": \"author 1\"}"
 ```
 ```shell script
-curl -X GET --location "http://localhost:8080/books/1
+curl -X GET -v --location "http://localhost:8080/books/1
 ```
 ```shell script
 curl -X DELETE --location "http://localhost:8080/books/1
